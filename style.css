@@ -1,0 +1,106 @@
+/* #fefee2 blanc qui flingue pas les yeux */
+/* https://moonbooks.org/Articles/Champs-de-formulaire-HTML-dynamiques-avec-javascript/ */
+.textes, .qui_sommes_nous_titres {
+    text-align:left;
+    width:50%;
+    padding:15px;
+}
+
+.titres {
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    font-size:20px;
+    padding:15px;
+    width:50%;
+}
+
+.centre_accueil {
+    padding:12.5%; /* totalement arbitraire */
+}
+
+.accueil { /*le bienvenue de l'acceuil*/
+    text-align:center;
+    margin:0px;
+    font-family:Brush Script MT, Brush Script Std, cursive;
+    color:black;
+    font-size:75px;
+    font-style:italic;
+}
+
+.sous_accueil { /* texte sous le gros bienvenue de la page d'accueil */
+    text-align:center;
+    color:black;
+    margin:0px;
+    font-family: Arial, sans-serif;
+}
+
+
+nav ul li { /*le menu en haut de page*/
+    display: inline-block;
+    width: 14%;
+    min-width:166.650px; /* pour éviter le chevauchement des textes quand on rétrécit trop la fênetre */
+    text-align: center;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+nav ul li p { /*Lacroix decor en haut à gauche*/
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+nav ul li a:hover {  /*animation du menu*/
+    color:orange;
+}
+
+.centre { /*pas vraiment au centre mais c'est le texte des pages*/
+    margin: 20px 20px;
+    font-family: Arial, sans-serif;
+    font-size:15px;
+    color:#606060;
+    width:50%;
+}
+
+a { /*les liens*/
+    text-decoration: none;
+    color:grey;
+    font-family: Arial, sans-serif;
+}
+
+body { /*dégradé de fond*/
+    background-color:rgba(117, 190, 218, 0.0);
+    margin:0px;
+}
+
+nav {
+    background-color:black;
+}
+
+html {
+    min-height: 100%;
+    background-color: #fefee2
+    /*#FD6C9E*/
+}
+
+ul {
+    margin:0px;
+}
+
+.gras {
+    font-weight:bolder;
+}
+
+img {
+    width:250px;
+    height:250px;
+    border-radius: 5px;
+}
+
+.deco {
+    display: inline-block;
+}
+
+.images_deco {
+    text-align:center;
+    padding:20px;
+
+}
