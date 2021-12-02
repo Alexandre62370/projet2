@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <title>LACROIX DECOR</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+         function validateForm()
+         {
+
+             var name = document.forms["myForm"]["name"];
+             if (name.value == ""){
+                 document.getElementById('errorname').innerHTML="  Veuillez entrez un nom valide";
+                 name.focus();
+                 return false;
+             }else{
+                    document.getElementById('errorname').innerHTML="";
+             }
+
+             var first_name = document.forms["myForm"]["first_name"];
+             if (first_name.value == ""){
+                 document.getElementById('errorfirst_name').innerHTML="  Veuillez entrez un prénom valide";
+                 first_name.focus();
+                 return false;
+             }else{
+                 document.getElementById('errorfirst_name').innerHTML="";   
+             }
+
+         }
+     </script>
 </head>
 <body>
 
@@ -25,6 +49,12 @@
             Boutique et travaux
         </p>
     </div>
+
+    <form name="myForm" onsubmit="return validateForm()">
+         <p>Votre nom: <input type="text" name="name" class="field-long"/><span class="error" id="errorname"></span></p>
+         <p>Votre prénom: <input type="text" name="first_name" class="field-long"/><span class="error" id="errorfirst_name"></span></p>
+         <p><input type="submit" value="Envoyer"></p>
+      </form>
 
 </body>
 </html>
