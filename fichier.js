@@ -1,4 +1,4 @@
-// voir plus simple sur : https://waytolearnx.com/2019/10/afficher-un-message-derreur-a-cote-dun-input-en-javascript.html
+// voir plus simple hvkvksur : https://waytolearnx.com/2019/10/afficher-un-message-derreur-a-cote-dun-input-en-javascript.html
   $(document).ready(function() {
     $('#contact_form').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
