@@ -1,123 +1,40 @@
-// voir plus simple hvkvksur : https://waytolearnx.com/2019/10/afficher-un-message-derreur-a-cote-dun-input-en-javascript.html
-  $(document).ready(function() {
-    $('#contact_form').bootstrapValidator({
-        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-        feedbackIcons: {
-            valid: 'glyphicon glyphicon-ok',
-            invalid: 'glyphicon glyphicon-remove',
-            validating: 'glyphicon glyphicon-refresh'
-        },
-        fields: {
-            first_name: {
-                validators: {
-                        stringLength: {
-                        min: 2,
-                    },
-                        notEmpty: {
-                        message: 'Please supply your first name'
-                    }
-                }
-            },
-             last_name: {
-                validators: {
-                     stringLength: {
-                        min: 2,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your last name'
-                    }
-                }
-            },
-            email: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your email address'
-                    },
-                    emailAddress: {
-                        message: 'Please supply a valid email address'
-                    }
-                }
-            },
-            phone: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your phone number'
-                    },
-                    phone: {
-                        country: 'US',
-                        message: 'Please supply a vaild phone number with area code'
-                    }
-                }
-            },
-            address: {
-                validators: {
-                     stringLength: {
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your street address'
-                    }
-                }
-            },
-            city: {
-                validators: {
-                     stringLength: {
-                        min: 4,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your city'
-                    }
-                }
-            },
-            state: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please select your state'
-                    }
-                }
-            },
-            zip: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your zip code'
-                    },
-                    zipCode: {
-                        country: 'US',
-                        message: 'Please supply a vaild zip code'
-                    }
-                }
-            },
-            comment: {
-                validators: {
-                      stringLength: {
-                        min: 10,
-                        max: 200,
-                        message:'Please enter at least 10 characters and no more than 200'
-                    },
-                    notEmpty: {
-                        message: 'Please supply a description of your project'
-                    }
-                    }
-                }
-            }
-        })
-        .on('success.form.bv', function(e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#contact_form').data('bootstrapValidator').resetForm();
+function validateForm()
+         {
 
-            // Prevent form submission
-            e.preventDefault();
+             var name = document.forms["myForm"]["name"];
+             if (name.value == ""){
+                 document.getElementById('errorname').innerHTML="  Veuillez entrez un nom valide";
+                 name.focus();
+                 return false;
+             }else{
+                    document.getElementById('errorname').innerHTML="";
+             }
 
-            // Get the form instance
-            var $form = $(e.target);
+             var first_name = document.forms["myForm"]["first_name"];
+             if (first_name.value == ""){
+                 document.getElementById('errorfirst_name').innerHTML="  Veuillez entrez un prénom valide";
+                 first_name.focus();
+                 return false;
+             }else{
+                 document.getElementById('errorfirst_name').innerHTML="";
+             }
 
-            // Get the BootstrapValidator instance
-            var bv = $form.data('bootstrapValidator');
+            var email = document.forms["myForm"]["email"];
+             if (email.value.indexOf("@",0)<0){
+                 document.getElementById('erroremail').innerHTML="  Veuillez entrez une adresse mail valide";
+                 email.focus();
+                 return false;
+             }else{
+                 document.getElementById('erroremail').innerHTML="";
+             }
 
-            // Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function(result) {
-                console.log(result);
-            }, 'json');
-        });
-});
+             var civil = document.forms["myForm"]["civil"];
+             if (civil.value == ""){
+                 document.getElementById('errorcivil').innerHTML="  Veuillez choisir une civilité";
+                 civil.focus();
+                 return false;
+             }else{
+                 document.getElementById('errorecivil').innerHTML="";
+             }
 
+         }

@@ -1,33 +1,15 @@
+<!--
+à faire :
+- un menu déroulant pour le champ civilité dans le formulaire de contact
+- styliser le formulaire
+- styliser les messages d'erreurs-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>LACROIX DECOR</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-         function validateForm()
-         {
-
-             var name = document.forms["myForm"]["name"];
-             if (name.value == ""){
-                 document.getElementById('errorname').innerHTML="  Veuillez entrez un nom valide";
-                 name.focus();
-                 return false;
-             }else{
-                    document.getElementById('errorname').innerHTML="";
-             }
-
-             var first_name = document.forms["myForm"]["first_name"];
-             if (first_name.value == ""){
-                 document.getElementById('errorfirst_name').innerHTML="  Veuillez entrez un prénom valide";
-                 first_name.focus();
-                 return false;
-             }else{
-                 document.getElementById('errorfirst_name').innerHTML="";
-             }
-
-         }
-     </script>
+    <script src="fichier.js" defer></script>
 </head>
 <body>
 
@@ -51,9 +33,20 @@
     </div>
 
     <form name="myForm" onsubmit="return validateForm()">
-         <p>Votre nom: <input type="text" name="name" class="field-long"/><span class="error" id="errorname"></span></p>
-         <p>Votre prénom: <input type="text" name="first_name" class="field-long"/><span class="error" id="errorfirst_name"></span></p>
-         <p><input type="submit" value="Envoyer"></p>
+        <h3>Formulaire de contact</h3>
+        <p>Votre Nom : <input type="text" name="name" class="field-long" placeholder="Nom"/><span class="error" id="errorname"></span></p>
+        <p>Votre Prénom : <input type="text" name="first_name" class="field-long" placeholder="Prénom"/><span class="error" id="errorfirst_name"></span></p>
+        <p>Votre Email : <input type="text" name="email" class="field-long" placeholder="Email"/><span class="error" id="erroremail"></span></p>
+        <p>
+            Votre Civilité :
+            <select name="civil" id="errorcivil">
+             <option value="">Choisir votre civilité</option>
+             <option value="M">Monsieur</option>
+             <option value="Mme">Madame</option>
+             <option value="Mlle">Madmoiselle</option>
+            </select>
+         </p>
+         <input type="submit" value="Envoyer">
       </form>
 
 </body>

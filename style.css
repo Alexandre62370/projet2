@@ -104,3 +104,20 @@ img {
     padding:20px;
 
 }
+
+/* formulaire */
+form {
+    background-color:black;
+    color:grey;
+    padding:5px;
+    font-family: Arial, sans-serif;
+}
+
+form input {
+    padding:5px;
+}
+
+form p {
+    display: block; /* La balise devient de type block. */
+	width: 125px;
+}
