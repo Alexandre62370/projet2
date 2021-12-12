@@ -1,0 +1,1 @@
+Le but de ce projet est de faire le site vitrine d'une entreprise de décoration et de rénovation en html/css et en ajoutant du javascript. Je m'imspirer de site de Lionnet Décor en utlisant les images que contient le fichier project_2.

@@ -34,7 +34,7 @@ function validateForm()
                  civil.focus();
                  return false;
              }else{
-                 document.getElementById('errorecivil').innerHTML="";
+                 document.getElementById('errorcivil').innerHTML="";
              }
 
          }
